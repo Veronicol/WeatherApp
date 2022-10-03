@@ -1,0 +1,26 @@
+[
+    {
+        "id": "en",
+        "messages": {
+            "buttonText": "English",
+            "title": "Weather app",
+            "TRNT": "Toronto",
+            "SGP": "Singapore",
+            "LNDN": "London",
+            "citiesSelectInputText": "Select an option",
+            "altIcon": "current weather icon"
+        }
+    },
+    {
+        "id": "es",
+        "messages": {
+            "buttonText": "Español",
+            "title": "Aplicación meteorológica",
+            "TRNT": "Toronto",
+            "SGP": "Singapur",
+            "LNDN": "Londres",
+            "citiesSelectInputText": "Selecciona una opción",
+            "altIcon": "icono de tiempo actual"
+        }
+    }
+]
