@@ -1,4 +1,3 @@
-import './../App.css';
 import { Detail } from '../Components/Detail';
 import { OptionSelector } from '../Components/OptionSelector';
 import { LanguageButton } from '../Components/LanguageButton';
@@ -40,19 +39,25 @@ export const Layout = () => {
   }
 
   return (
-      <div className="App">
+      <div>
         <header>
-          {langList.map(currentLang => {
-            const { id, messages } = currentLang;
-            return <LanguageButton key={id} language={id}>{messages.buttonText}</LanguageButton>
+          {langList.map(lang => {
+            const { id, messages } = lang;
+            const buttonClass = `button ${id === currentLang ? ' button__selected' : ''}`;
+            return <LanguageButton key={id} language={id} buttonClass={buttonClass}>{messages.buttonText}</LanguageButton>
           })}
         </header>
-        <section>
-          Cities
-          <OptionSelector options={getCityOptions()} handleSelectOption={onSelectCity} />
-        </section>
-        <section>{messages.title}</section>
-          {weatherData && <Detail detailInfo={weatherData} />}
+        <div className="content-container">
+          <section className="section">
+            <h2>{messages.title}</h2>
+          </section>
+          <section>
+            <OptionSelector options={getCityOptions()} handleSelectOption={onSelectCity} />
+          </section>
+          <section>
+            {weatherData && <Detail detailInfo={weatherData}/>}
+          </section>
+        </div>
       </div>
   );
 }

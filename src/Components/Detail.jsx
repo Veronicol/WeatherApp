@@ -4,12 +4,12 @@ export const Detail = ({ detailInfo: { icon, description, maxTemp, minTemp, curr
     const { messages } = useSelector(state => state.lang);
 
     return (
-        <div>
+        <div className="detail-container">
             <img src={icon} alt={messages.altIcon}/>
             <div>{description}</div>
-            <div>{currentTemp}</div>
-            <div>{maxTemp}</div>
-            <div>{minTemp}</div>
+            <div>{messages.currentTemp}: <span>{currentTemp}</span></div>
+            <div>{messages.maxTemp}: <span>{maxTemp}</span></div>
+            <div>{messages.minTemp}: <span>{minTemp}</span></div>
         </div>
     )
 }

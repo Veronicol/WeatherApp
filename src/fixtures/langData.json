@@ -3,24 +3,31 @@
         "id": "en",
         "messages": {
             "buttonText": "English",
-            "title": "Weather app",
+            "title": "Weather by city",
             "TRNT": "Toronto",
             "SGP": "Singapore",
             "LNDN": "London",
-            "citiesSelectInputText": "Select an option",
-            "altIcon": "current weather icon"
+            "citiesSelectInputText": "Select a city",
+            "altIcon": "current weather icon",
+            "currentTemp": "feels like",
+            "maxTemp": "higer today",
+            "minTemp": "lower today"
         }
     },
     {
         "id": "es",
         "messages": {
             "buttonText": "Español",
-            "title": "Aplicación meteorológica",
+            "title": "El Tiempo por ciudades",
             "TRNT": "Toronto",
             "SGP": "Singapur",
             "LNDN": "Londres",
-            "citiesSelectInputText": "Selecciona una opción",
-            "altIcon": "icono de tiempo actual"
+            "citiesSelectInputText": "Selecciona una ciudad",
+            "altIcon": "icono de tiempo actual",
+            "currentTemp": "sensación térmica",
+            "maxTemp": "máxima hoy",
+            "minTemp": "mínima hoy"
+
         }
     }
 ]
