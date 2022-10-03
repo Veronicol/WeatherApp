@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Wheater App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Arrancar el proyecto
+Este proyecto hace llamadas a una API externa, por lo que antes de arrancarlo, debes sustituir el archivo `.env.example` por `.env`, y dentro de éste, la variable `API_KEY` por una apiKey válida. Puedes crear la tuya en : [https://openweathermap.org/price](https://openweathermap.org/price)
 
-## Available Scripts
+## Decisiones de proyecto
+Al tratarse de un proyecto corto y de resolución rápida, lo he creado con create-react-app para tener el boilerplate autogenerado.
+### Organización
+Aunque es un proyecto muy pequeño, he organizado los archivos y carpetas para que éste sea fácilmente escalable. He separado las capas del proyecto siguiendo el principio de responsabilidad única, y por ello he creado un servicio para las llamadas a la API y un modelo para el mapeo de datos necesario para el renderizado en los componentes.
+### Estilos
+He incluido los estilos mínimos necesarios para hacer la página legible, y utilizado sass como preprocesador CSS (esta decisión ha sido tomada sobre todo para ahorrar tiempo de desarrollo, ya que tengo un boilerplate de uso personal para normalización y variables montado con scss).
+### Testing
+He creado una suite con las sentencias a testear derivadas de los requerimientos (aparacen comentadas en el código), y desarrollado el primero de los casos.
+### Redux
+He implantado Redux como solución al requerimiento de que el proyecto tenga varios idiomas. Esta decisión ha venido derivada más de la descripción de los requerimientos (en los que como posible solución se citaba Redux), que por convicción propia, ya que en este caso tan sencillo lo habría manejado con un contexto de React. En cuanto a las traducciones, no he considerado necesario introducir ningún paquete adicional como [react-intl](https://www.npmjs.com/package/react-intl) para no hacer más compleja la solución.
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Próximas iteraciones
+En caso de seguir desarrollando este proyecto, los pasos más inmediatos serán:
+- Gestión de errores de API
+- Loading durante la carga de datos del detalle
+- Completar los test-cases
