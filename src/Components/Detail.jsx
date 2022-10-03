@@ -1,15 +1,17 @@
 import { useSelector } from "react-redux";
 
-export const Detail = ({ detailInfo: { icon, description, maxTemp, minTemp, currentTemp } }) => {
+export const Detail = ({ detailInfo: { icon, description, ...restOfProps } }) => {
+    const otherOptions = Object.entries(restOfProps);
     const { messages } = useSelector(state => state.lang);
 
     return (
         <div className="detail-container">
             <img src={icon} alt={messages.altIcon}/>
             <div>{description}</div>
-            <div>{messages.currentTemp}: <span>{currentTemp}</span></div>
-            <div>{messages.maxTemp}: <span>{maxTemp}</span></div>
-            <div>{messages.minTemp}: <span>{minTemp}</span></div>
+            {otherOptions.map(currentOption => {
+                const [optionName, optionValue] = currentOption;
+                return <div key={optionName}>{messages[optionName]}: <span>{optionValue}</span></div>
+            })}
         </div>
     )
 }

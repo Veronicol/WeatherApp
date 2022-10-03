@@ -13,7 +13,7 @@ export const Layout = () => {
   const cityIdList = citiesData.map(currentCity => currentCity.id);
 
   const { id: currentLang, messages } = useSelector(state => state.lang);
-  const [weatherData, setWeatherData] = useState(null)
+  const [weatherData, setWeatherData] = useState(null);
 
   const getCityOptions = () => {
     return cityIdList.map(currentId => ( {
