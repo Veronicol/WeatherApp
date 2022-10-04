@@ -7,7 +7,7 @@ export const OptionSelector = ({ options, handleSelectOption}) => {
 
     useEffect(() => {
         currentOption.current && handleSelectOption(currentOption.current);
-    }, [currentLang, handleSelectOption])
+    }, [currentLang])
 
     const handleChange = event => {
         handleSelectOption(event.target.value);
